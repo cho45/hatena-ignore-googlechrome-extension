@@ -1,0 +1,30 @@
+{
+    "name": "Hatena::Ignore",
+    "version": "0.0.1",
+    "description": "apply ignore ids on b.hatena.ne.jp to all services of Hatena",
+    "background_page": "background.html",
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": ["http://*.hatena.ne.jp/*", "https://*.hatena.ne.jp/*"],
+            "js": [
+                "jsdeferred.userscript.js",
+                "puredomconstructor.js",
+                "dollarX.js",
+                "duration.js",
+                "content.js"
+            ],
+            "run_at" : "document_idle"
+        }
+    ],
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://b.hatena.ne.jp/",
+        "http://www.st-hatena.com/"
+    ]
+}

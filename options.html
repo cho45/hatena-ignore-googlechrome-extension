@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>options</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="jsdeferred.userscript.js"></script>
+    <script type="text/javascript" src="duration.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+      .member {
+        background: #efefef;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        float: left;
+        margin: 5px;
+        width: 17em;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .member:hover {
+        background: #ccc;
+      }
+
+      .member a {
+        display: block;
+        padding: 10px;
+      }
+
+      .member img {
+        margin: 2px;
+      }
+
+      .member a:link {
+        text-decoration: none;
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="javascript:void(0)" id="refresh">再取得</a>
+    <p id="info"></p>
+    <div id="members">
+    </div>
+    <script id="tmpl-member" type="text/x-jquery-tmpl">
+      <div class="member" data-name="${name}">
+        <a href="${link}"><img src="${image}" width="16" height="16"/>${name}</a>
+      </div>
+    </script>
+
+  </body>
+</html>
